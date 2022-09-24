@@ -157,6 +157,14 @@ export const darkTheme = createTheme({
           color:'abff00',
         }
       }
-    }
+    },
+    MuiInputBase:{
+      styleOverrides: {
+        root: {
+          borderRadius: '25px',
+          width:'100%',
+        }
+      }
+    },
   }
 });

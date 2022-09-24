@@ -21,11 +21,8 @@ a {
   object-fit: cover;
 }
 
-.css-1orzy9s{
+.searchbar{
   border-radius: 3rem;
-}
-.css-1x9fjdj-MuiInputBase-root{
-  width: 100%;
 }
 
 @media (prefers-color-scheme: dark) {
