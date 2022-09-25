@@ -3,9 +3,13 @@ import { Box, Button, Card, CardActionArea, CardActions, CardContent, CardMedia,
 import type { NextPage } from 'next'
 import { ShopLayout } from '../components/layouts/ShopLayout'
 import { SearchBar } from '../components/ui'
+import { useProducts } from '../hooks'
+import { ProductList } from '../components/products'
 
 
 const Home: NextPage = () => {
+
+  const { products, isLoading } = useProducts('/products')
 
   const [value, setValue] = React.useState(0);
 
@@ -42,184 +46,7 @@ const Home: NextPage = () => {
         </Tabs>
       </Box>
 
-      <Grid container spacing={ 2 } marginTop={ 4 }>
-        
-        <Grid item xs={ 12 } sm={ 6 } md={ 4 } lg={ 3 } xl={ 2 }>
-          <Card sx={{ maxWidth:'100%' }}>
-            <CardActionArea>
-              <CardMedia
-                component="img"
-                height="240"
-                image="https://res.cloudinary.com/dnxxkvpiz/image/upload/v1646082040/Berkelio/cartera_bolso_fddki0.jpg"
-                alt="green iguana"
-              />
-              <CardContent>
-                <Typography variant="h6" component="div" color='info'>
-                  $399 mxn
-                </Typography>
-                <Typography gutterBottom color={ "info.main" }>
-                  Libros
-                </Typography>
-
-                <Typography color="text.secondary" marginTop={ 2 }>
-                  Lizards are a widespread group of squamate reptiles.
-                </Typography>
-              </CardContent>
-            </CardActionArea>
-            <CardActions>
-              <Button size="small" color="info" fullWidth sx={{  }}>
-                Comprar
-              </Button>
-            </CardActions>
-          </Card>
-        </Grid>
-        <Grid item xs={ 12 } sm={ 6 } md={ 4 } lg={ 3 } xl={ 2 }>
-          <Card sx={{ maxWidth:'100%' }}>
-            <CardActionArea>
-              <CardMedia
-                component="img"
-                height="240"
-                image="https://res.cloudinary.com/dnxxkvpiz/image/upload/v1646082040/Berkelio/cartera_bolso_fddki0.jpg"
-                alt="green iguana"
-              />
-              <CardContent>
-                <Typography variant="h6" component="div" color='info'>
-                  $399 mxn
-                </Typography>
-                <Typography gutterBottom color={ "info.main" }>
-                  Libros
-                </Typography>
-
-                <Typography color="text.secondary" marginTop={ 2 }>
-                  Lizards are a widespread group of squamate reptiles.
-                </Typography>
-              </CardContent>
-            </CardActionArea>
-            <CardActions>
-              <Button size="small" color="info" fullWidth sx={{  }}>
-                Comprar
-              </Button>
-            </CardActions>
-          </Card>
-        </Grid>
-        <Grid item xs={ 12 } sm={ 6 } md={ 4 } lg={ 3 } xl={ 2 }>
-          <Card sx={{ maxWidth:'100%' }}>
-            <CardActionArea>
-              <CardMedia
-                component="img"
-                height="240"
-                image="https://res.cloudinary.com/dnxxkvpiz/image/upload/v1646082040/Berkelio/cartera_bolso_fddki0.jpg"
-                alt="green iguana"
-              />
-              <CardContent>
-                <Typography variant="h6" component="div" color='info'>
-                  $399 mxn
-                </Typography>
-                <Typography gutterBottom color={ "info.main" }>
-                  Libros
-                </Typography>
-
-                <Typography color="text.secondary" marginTop={ 2 }>
-                  Lizards are a widespread group of squamate reptiles.
-                </Typography>
-              </CardContent>
-            </CardActionArea>
-            <CardActions>
-              <Button size="small" color="info" fullWidth sx={{  }}>
-                Comprar
-              </Button>
-            </CardActions>
-          </Card>
-        </Grid>
-        <Grid item xs={ 12 } sm={ 6 } md={ 4 } lg={ 3 } xl={ 2 }>
-          <Card sx={{ maxWidth:'100%' }}>
-            <CardActionArea>
-              <CardMedia
-                component="img"
-                height="240"
-                image="https://res.cloudinary.com/dnxxkvpiz/image/upload/v1646082040/Berkelio/cartera_bolso_fddki0.jpg"
-                alt="green iguana"
-              />
-              <CardContent>
-                <Typography variant="h6" component="div" color='info'>
-                  $399 mxn
-                </Typography>
-                <Typography gutterBottom color={ "info.main" }>
-                  Libros
-                </Typography>
-
-                <Typography color="text.secondary" marginTop={ 2 }>
-                  Lizards are a widespread group of squamate reptiles.
-                </Typography>
-              </CardContent>
-            </CardActionArea>
-            <CardActions>
-              <Button size="small" color="info" fullWidth sx={{  }}>
-                Comprar
-              </Button>
-            </CardActions>
-          </Card>
-        </Grid>
-        <Grid item xs={ 12 } sm={ 6 } md={ 4 } lg={ 3 } xl={ 2 }>
-          <Card sx={{ maxWidth:'100%' }}>
-            <CardActionArea>
-              <CardMedia
-                component="img"
-                height="240"
-                image="https://res.cloudinary.com/dnxxkvpiz/image/upload/v1646082040/Berkelio/cartera_bolso_fddki0.jpg"
-                alt="green iguana"
-              />
-              <CardContent>
-                <Typography variant="h6" component="div" color='info'>
-                  $399 mxn
-                </Typography>
-                <Typography gutterBottom color={ "info.main" }>
-                  Libros
-                </Typography>
-
-                <Typography color="text.secondary" marginTop={ 2 }>
-                  Lizards are a widespread group of squamate reptiles.
-                </Typography>
-              </CardContent>
-            </CardActionArea>
-            <CardActions>
-              <Button size="small" color="info" fullWidth sx={{  }}>
-                Comprar
-              </Button>
-            </CardActions>
-          </Card>
-        </Grid>
-        <Grid item xs={ 12 } sm={ 6 } md={ 4 } lg={ 3 } xl={ 2 }>
-          <Card sx={{ maxWidth:'100%' }}>
-            <CardActionArea>
-              <CardMedia
-                component="img"
-                height="240"
-                image="https://res.cloudinary.com/dnxxkvpiz/image/upload/v1646082040/Berkelio/cartera_bolso_fddki0.jpg"
-                alt="green iguana"
-              />
-              <CardContent>
-                <Typography variant="h6" component="div" color='info'>
-                  $399 mxn
-                </Typography>
-                <Typography gutterBottom color={ "info.main" }>
-                  Libros
-                </Typography>
-
-                <Typography color="text.secondary" marginTop={ 2 }>
-                  Lizards are a widespread group of squamate reptiles.
-                </Typography>
-              </CardContent>
-            </CardActionArea>
-            <CardActions>
-              <Button size="small" color="info" fullWidth sx={{  }}>
-                Comprar
-              </Button>
-            </CardActions>
-          </Card>
-        </Grid>
-
-      </Grid>
+      <ProductList products={ products } />
 
     </ShopLayout> 
   )
