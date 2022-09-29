@@ -82,11 +82,15 @@ const Home: NextPage = () => {
         scrollButtons
         allowScrollButtonsMobile
         >
+           <Tab key={ 0 } label={ 'Mascotas' } {...a11yProps( 0 )} />
+           <Tab key={ 1 } label={ 'Tecnología' } {...a11yProps( 1 )} />
+           <Tab key={ 2 } label={ 'Libros' } {...a11yProps( 2 )} />
+          {/*            
           {
             products.map( category =>(
               <Tab key={ category._id } label={ category.category } {...a11yProps( categories.indexOf( category.category  ) )} />
             ) )
-          }  
+          }   */}
         </Tabs>
       </Box>
 

@@ -15,11 +15,12 @@ export const ProductCard: FC<Props> = ({ product }) => {
     <Grid   item xs={ 12 } sm={ 6 } md={ 4 } lg={ 3 } xl={ 2 }
             key={ product._id } 
     >
-          <Card sx={{ maxWidth:'100%' }}>
+          <Card sx={{ maxWidth:'100%', height:'100%', display:'flex', justifyContent:'space-between', flexDirection:'column' }}>
             <CardActionArea>
               <CardMedia
+                sx={{ objectFit: "contain", height:'200px', backgroundColor:'#fff' }}
                 component="img"
-                height="240"
+                
                 image={ product.images[0] }
                 alt="green iguana"
               />
@@ -37,11 +38,11 @@ export const ProductCard: FC<Props> = ({ product }) => {
               </CardContent>
             </CardActionArea>
             <CardActions>
-             
-              <Button size="small" color="info" fullWidth>
-                Comprar
-              </Button>
-              
+             <Link href={ product.link } target='_blank' width='100%'>
+                <Button size="small" color="info" fullWidth>
+                  Comprar
+                </Button>
+             </Link>
             </CardActions>
           </Card>
     
