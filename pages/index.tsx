@@ -64,7 +64,7 @@ const Home: NextPage = () => {
 
   
   return (
-    <ShopLayout title={'Ochoagram Basics'} pageDescription={'Porductos recomendados por Ochoagram'} imageFullUrl={'https://res.cloudinary.com/dnxxkvpiz/image/upload/v1664481599/banner_b0ooh9.jpg'}>
+    <ShopLayout title={'Ochoagram Basics'} pageDescription={'Porductos recomendados por Ochoagram'} imageFullUrl={'https://res.cloudinary.com/dnxxkvpiz/image/upload/v1664482050/banner_aj88vf.jpg'}>
 
       <video autoPlay loop style={{ width: '100%', height: '400px' }} className='mainBanner'
       src='https://res.cloudinary.com/dnxxkvpiz/video/upload/v1646206789/Berkelio/cover_hzf9rb.mp4'>
