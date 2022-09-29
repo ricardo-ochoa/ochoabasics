@@ -4,7 +4,6 @@ import { db } from "./";
 
 export const getProductBySlug = async( slug:string ): Promise<IProduct | null> => {
 
-
     try{
 
         await db.connect();

@@ -9,9 +9,6 @@ interface Props {
 
 export const ProductList: FC<Props> = ({ products }) => {
 
-    useEffect(() => {
-        console.log(products)
-      }, [])
 
   return (
     <Grid container spacing={ 2 } marginTop={ 4 }>

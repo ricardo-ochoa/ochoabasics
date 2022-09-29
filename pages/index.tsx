@@ -1,21 +1,67 @@
-import React from 'react'
+import { useEffect, useState } from 'react';
 import { Box, Button, Card, CardActionArea, CardActions, CardContent, CardMedia, Grid, Tab, Tabs, Typography } from '@mui/material'
 import type { NextPage } from 'next'
 import { ShopLayout } from '../components/layouts/ShopLayout'
-import { SearchBar } from '../components/ui'
+import { FullScreenLoading, SearchBar } from '../components/ui'
 import { useProducts } from '../hooks'
 import { ProductList } from '../components/products'
 
 
+
+
+interface TabPanelProps {
+  children?: React.ReactNode;
+  index: number;
+  value: number;
+}
+
+function TabPanel(props: TabPanelProps) {
+  const { children, value, index, ...other } = props;
+
+  return (
+    <div
+      role="tabpanel"
+      hidden={value !== index}
+      id={`simple-tabpanel-${index}`}
+      aria-labelledby={`simple-tab-${index}`}
+      {...other}
+    >
+      {value === index && (
+        <Box sx={{ p: 3 }}>
+          <Typography>{children}</Typography>
+        </Box>
+      )}
+    </div>
+  );
+}
+
+function a11yProps(index: number) {
+  return {
+    id: `simple-tab-${index}`,
+    'aria-controls': `simple-tabpanel-${index}`,
+  };
+}
+
+
+
 const Home: NextPage = () => {
-
-  const { products, isLoading } = useProducts('/products')
-
-  const [value, setValue] = React.useState(0);
+  
+  const { products, isLoading } = useProducts(`/products?category=${ 'all' }`)
+  
+  const [value, setValue] = useState(0);
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
     setValue(newValue);
+    
   };
+
+  const categories = products.map( categ => categ.category );
+  // const productsData = products.filter( product => product.category ===  );
+
+  const showMascotas = products.filter( product => product.category === "Mascotas" );
+  const showLibros = products.filter( product => product.category === "Libros" );
+  const showTech = products.filter( product => product.category === "Tecnología" );
+
   
   return (
     <ShopLayout title={'Ochoagram Basics'} pageDescription={'Porductos recomendados por Ochoagram'}>
@@ -34,19 +80,36 @@ const Home: NextPage = () => {
         onChange={handleChange}
         variant="scrollable"
         scrollButtons
-        allowScrollButtonsMobile >
-
-          <Tab label="Hogar" />
-          <Tab label="Mascotas" />
-          <Tab label="Tecnoligía" />
-          <Tab label="libros" />
-          <Tab label="Cocina" />
-          <Tab label="Estilo de vida" />
-
+        allowScrollButtonsMobile
+        >
+          {
+            products.map( category =>(
+              <Tab key={ category._id } label={ category.category } {...a11yProps( categories.indexOf( category.category  ) )} />
+            ) )
+          }  
         </Tabs>
       </Box>
 
-      <ProductList products={ products } />
+       {
+        isLoading
+          ? <FullScreenLoading />
+          : 
+                <>
+                  <TabPanel key={ 0 } value={value} index={ 0 }>
+                    <ProductList products={ showMascotas } />
+                  </TabPanel>
+
+                  <TabPanel key={ 1 } value={value} index={ 1 }>
+                    <ProductList products={ showTech } />
+                  </TabPanel>
+
+                  <TabPanel key={ 2 } value={value} index={ 2 }>
+                    <ProductList products={ showLibros } />
+                  </TabPanel>
+                </>
+              
+       }
+
 
     </ShopLayout> 
   )

@@ -9,10 +9,6 @@ interface Props {
 }
 
 export const ProductCard: FC<Props> = ({ product }) => {
-
-  useEffect(() => {
-    console.log(product)
-  }, [])
   
 
   return (

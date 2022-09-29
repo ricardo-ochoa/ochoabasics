@@ -8,7 +8,7 @@ export const useProducts = ( url:string, config:SWRConfiguration = {} ) => {
 
     const { data, error } = useSWR<IProduct[]>(`/api${ url }`, config);
 
-    return { 
+    return {
         products: data || [],
         isLoading: !error && !data,
         isError: error
