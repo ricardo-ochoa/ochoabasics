@@ -146,6 +146,56 @@ export const initialData: SeedData = {
                 "title": "Echo Show 15, pantalla inteligente Full HD de 15.6”",
                 "link": "https://www.amazon.com.mx/Presentamos-echo-show-15-pantalla-inteligente-con-Alexa/dp/B08MQLDFF6/ref=d_p13n_ds_purchase_sim_1p_dp_desktop_sccl_1_7/136-5553726-4250030?pd_rd_w=4iQPx&content-id=amzn1.sym.e7a23d1c-02b5-4c3b-aedf-9570768e92ae&pf_rd_p=e7a23d1c-02b5-4c3b-aedf-9570768e92ae&pf_rd_r=2RGVBSMCZV9E93ZJ25SA&pd_rd_wg=iiuLk&pd_rd_r=b123d6e5-bad6-4ffa-bb96-7366a0472f36&pd_rd_i=B08MQLDFF6&psc=1",
                 "category": "Tecnología"
-            }
+            },
+            {
+                "description": "",
+                "images": [
+                    "https://images-na.ssl-images-amazon.com/images/I/41E8mC3L5tL._SX379_BO1,204,203,200_.jpg"
+                ],
+                "price": 577,
+                "title": "Learning Algorithms: A Programmer's Guide to Writing Better Code",
+                "link": "https://www.amazon.com.mx/Learning-Algorithms-Programmers-Writing-Better/dp/1492091065/ref=sr_1_4?keywords=oreilly&qid=1664472940&qu=eyJxc2MiOiI2LjM1IiwicXNhIjoiNi4wNSIsInFzcCI6IjQuMzIifQ%3D%3D&sprefix=orei%2Cspecialty-aps%2C105&sr=8-4",
+                "category": "Libros"
+            },
+            {
+                "description": "",
+                "images": [
+                    "https://images-na.ssl-images-amazon.com/images/I/51bP-o7RHIL._SX379_BO1,204,203,200_.jpg"
+                ],
+                "price": 490,
+                "title": "IOS 15 Programming Fundamentals with Swift: Swift, Xcode, and Cocoa Basics",
+                "link": "https://www.amazon.com.mx/IOS-15-Programming-Fundamentals-Swift/dp/1098118502/ref=sr_1_6?keywords=oreilly&qid=1664472940&qu=eyJxc2MiOiI2LjM1IiwicXNhIjoiNi4wNSIsInFzcCI6IjQuMzIifQ%3D%3D&sprefix=orei%2Cspecialty-aps%2C105&sr=8-6",
+                "category": "Libros"
+            },
+            {
+                "description": "",
+                "images": [
+                    "https://m.media-amazon.com/images/I/514xvNk9rTL.jpg"
+                ],
+                "price": 327,
+                "title": "Designing Data-Intensive Applications: The Big Ideas Behind Reliable, Scalable, and Maintainable Systems (English Edition)",
+                "link": "https://www.amazon.com.mx/Designing-Data-Intensive-Applications-Reliable-Maintainable-ebook/dp/B06XPJML5D/ref=sr_1_33?keywords=oreilly&qid=1664472991&qu=eyJxc2MiOiI2LjM1IiwicXNhIjoiNi4wNSIsInFzcCI6IjQuMzIifQ%3D%3D&sprefix=orei%2Cspecialty-aps%2C105&sr=8-33",
+                "category": "Libros"
+            },
+            {
+                "description": "",
+                "images": [
+                    "https://images-na.ssl-images-amazon.com/images/I/61WlLa-OQKL._SX396_BO1,204,203,200_.jpg"
+                ],
+                "price": 742.25,
+                "title": "About Face 3: The Essentials of Interaction Design",
+                "link": "https://www.amazon.com.mx/About-Face-Essentials-Interaction-Design/dp/0470084111/ref=sr_1_6?__mk_es_MX=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=25V04D3LH2WZV&keywords=about+face&qid=1664473043&qu=eyJxc2MiOiIxLjEyIiwicXNhIjoiMC45NCIsInFzcCI6IjAuMDAifQ%3D%3D&sprefix=about+faces%2Caps%2C106&sr=8-6",
+                "category": "Libros"
+            },
+            {
+                "description": "",
+                "images": [
+                    "https://images-na.ssl-images-amazon.com/images/I/410RTQezHYL._SX326_BO1,204,203,200_.jpg"
+                ],
+                "price": 146.15,
+                "title": "The Design of Everyday Things",
+                "link": "https://www.amazon.com.mx/Design-Everyday-Things-Don-Norman/dp/0465050654/ref=sr_1_4?__mk_es_MX=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=32FYERNI2N8ZV&keywords=ux&qid=1664473070&qu=eyJxc2MiOiI1LjEyIiwicXNhIjoiNC41NSIsInFzcCI6IjMuOTAifQ%3D%3D&sprefix=ux%2Caps%2C106&sr=8-4",
+                "category": "Libros"
+            },
         ]
 }

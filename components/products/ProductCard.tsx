@@ -16,30 +16,33 @@ export const ProductCard: FC<Props> = ({ product }) => {
             key={ product._id } 
     >
           <Card sx={{ maxWidth:'100%', height:'100%', display:'flex', justifyContent:'space-between', flexDirection:'column' }}>
-              <CardActionArea>
-                    <CardMedia
-                      sx={{ objectFit: "contain", height:'200px', backgroundColor:'#fff' }}
-                      component="img"
-                      image={ product.images[0] }
-                      alt={ product.title }
-                    />
-              </CardActionArea>
-              
-              <CardContent>
-                <Typography variant="h6" component="div" color='info'>
-                  ${ product.price } mxn
-                </Typography>
-                <Typography gutterBottom color={ "info.main" }>
-                  { product.category }
-                </Typography>
 
-                <Typography color="text.secondary" marginTop={ 2 }>
-                  { product.title }
-                </Typography>
-              </CardContent>
+              <Box>
+                <CardActionArea>
+                      <CardMedia
+                        sx={{ objectFit: "contain", height:'200px', backgroundColor:'#fff' }}
+                        component="img"
+                        image={ product.images[0] }
+                        alt={ product.title }
+                      />
+                </CardActionArea>
+                
+                <CardContent>
+                  <Typography variant="h6" component="div" color='info'>
+                    ${ product.price } mxn
+                  </Typography>
+                  <Typography gutterBottom color={ "info.main" }>
+                    { product.category }
+                  </Typography>
+
+                  <Typography color="text.secondary" marginTop={ 2 }>
+                    { product.title }
+                  </Typography>
+                </CardContent>
+              </Box>
 
             <CardActions>
-             <Link href={ product.link } target='_blank' width='100%'>
+             <Link href={ product.link } target='_blank' width='100%' sx={{ textDecoration:'none' }}>
                 <Button size="small" color="info" fullWidth>
                   Comprar
                 </Button>
