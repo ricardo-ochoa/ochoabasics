@@ -16,14 +16,15 @@ export const ProductCard: FC<Props> = ({ product }) => {
             key={ product._id } 
     >
           <Card sx={{ maxWidth:'100%', height:'100%', display:'flex', justifyContent:'space-between', flexDirection:'column' }}>
-            <CardActionArea>
-              <CardMedia
-                sx={{ objectFit: "contain", height:'200px', backgroundColor:'#fff' }}
-                component="img"
-                
-                image={ product.images[0] }
-                alt="green iguana"
-              />
+              <CardActionArea>
+                    <CardMedia
+                      sx={{ objectFit: "contain", height:'200px', backgroundColor:'#fff' }}
+                      component="img"
+                      image={ product.images[0] }
+                      alt={ product.title }
+                    />
+              </CardActionArea>
+              
               <CardContent>
                 <Typography variant="h6" component="div" color='info'>
                   ${ product.price } mxn
@@ -36,7 +37,7 @@ export const ProductCard: FC<Props> = ({ product }) => {
                   { product.title }
                 </Typography>
               </CardContent>
-            </CardActionArea>
+
             <CardActions>
              <Link href={ product.link } target='_blank' width='100%'>
                 <Button size="small" color="info" fullWidth>

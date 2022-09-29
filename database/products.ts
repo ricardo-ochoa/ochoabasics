@@ -28,6 +28,56 @@ export const initialData: SeedData = {
                 "category": "Mascotas"
             },
             {
+                "description": "",
+                "images": [
+                    "https://m.media-amazon.com/images/I/81DTMA09EVL._AC_SX679_.jpg",
+                ],
+                "price": 1089,
+                "title": "Transportín de viaje de malla suave para mascotas Negro, Grande",
+                "link": "https://www.amazon.com.mx/Amazon-Basics-Portamascotas-Suaves-Grande/dp/B00QHC01C2?ref_=ast_sto_dp&th=1",
+                "category": "Mascotas"
+            },
+            {
+                "description": "",
+                "images": [
+                    "	https://m.media-amazon.com/images/I/71Aa0PbLdyL._AC_SX679_.jpg",
+                ],
+                "price": 499,
+                "title": "AFujia-Protector de Asiento Trasero para Perros, Fundas para Asiento de Coche para Perro, Impermeable, A Prueba de Arañazos, Antideslizante, Hamaca para Perros, Protección de Asiento (Trasero)",
+                "link": "https://www.amazon.com.mx/dp/B09BR15DH6/ref=sspa_dk_detail_2?ie=UTF8&pd_rd_i=B09BR15DH6p13NParams&s=pet-supplies&sp_csd=d2lkZ2V0TmFtZT1zcF9kZXRhaWw&th=1",
+                "category": "Mascotas"
+            },
+            {
+                "description": "",
+                "images": [
+                    "https://m.media-amazon.com/images/I/91HK34qd-RL._AC_SX679_.jpg",
+                ],
+                "price": 412.38,
+                "title": "Bolsas sanitarias para perro, con dispensador y clip de correa, tamaño estándar, aditivo EPI, color verde, 810 unidades",
+                "link": "https://www.amazon.com.mx/AmazonBasics-deshechos-dispensador-correa-unidades/dp/B07284NRTH?ref_=ast_sto_dp&th=1",
+                "category": "Mascotas"
+            },
+            {
+                "description": "",
+                "images": [
+                    "https://m.media-amazon.com/images/I/81DTMA09EVL._AC_SX679_.jpg",
+                ],
+                "price": 409,
+                "title": "Dispensador de agua para mascota, color gris, chico",
+                "link": "https://www.amazon.com.mx/AmazonBasics-Taz%C3%B3n-gravedad-mascota-peque%C3%B1o/dp/B07227RQJ9?ref_=ast_sto_dp&th=1",
+                "category": "Mascotas"
+            },
+            {
+                "description": "",
+                "images": [
+                    "https://m.media-amazon.com/images/I/61DyPXgNcpL._AC_SX679_.jpg",
+                ],
+                "price": 350.09,
+                "title": "Tazón para perro, acero inoxidable, 2 unidades",
+                "link": "https://www.amazon.com.mx/Amazon-Basics-tazones-Acero-Inoxidable/dp/B01DOP5S9K/ref=d_pd_pb_int_sa_ss_sccl_3_2/136-5553726-4250030?pd_rd_w=XMU1G&content-id=amzn1.sym.3f809697-7b30-4b99-90ad-7638ac3b32f3&pf_rd_p=3f809697-7b30-4b99-90ad-7638ac3b32f3&pf_rd_r=PRZQ3316Q0ZP8TCSWMR1&pd_rd_wg=4HoTs&pd_rd_r=b9941d37-d25c-41b4-84b1-8b70daf3f81d&pd_rd_i=B01DOP5S9K&psc=1",
+                "category": "Mascotas"
+            },
+            {
                 "description": "LG 27UL500 Monitor, 27-Inch Screen, LED-Lit, 3840x2160 pixels, 16: 9, 2 HDMI, 1 USB, 60 hertz",
                 "images": [
                     "https://m.media-amazon.com/images/I/81lJmX1H4JL._AC_SX679_.jpg"

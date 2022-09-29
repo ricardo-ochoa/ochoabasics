@@ -11,6 +11,10 @@ a {
   text-decoration: none;
 }
 
+a:hover {
+  color: chartreuse;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -20,6 +24,7 @@ a {
   height: 400px;
   object-fit: cover;
 }
+
 
 .searchbar{
   border-radius: 3rem;
@@ -31,6 +36,6 @@ a {
   }
   body {
     color: white;
-    background: black;
+    background: #000;
   }
 }
