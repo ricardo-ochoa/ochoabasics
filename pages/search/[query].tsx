@@ -50,18 +50,21 @@ const SearchPage: NextPage<Props> = ({ products, foundProducts, query }) => {
                   
                   </Box> 
                 : (
-                    <Box display='flex'sx={{ flexDirection:{ xs:'column', sm:'column', md:'row'}, alignItems:'center'  }}>
-                        <Typography variant='h4' sx={{ mb: 1 }} mt={ 2 }>No encontramos:</Typography>
-                        <Typography variant='h4' sx={{ ml: 2, mt:{ xs: 0, md: 1 } }}  color="primary" textTransform="capitalize">{ query }
+                    <>
+                        <Box display='flex'sx={{ flexDirection:{ xs:'column', sm:'column', md:'row'}, alignItems:'center'  }}>
+                            <Typography variant='h4' sx={{ mb: 1 }} mt={ 2 }>No encontramos:</Typography>
+                            <Typography variant='h4' sx={{ ml: 2, mt:{ xs: 0, md: 1 } }}  color="primary" textTransform="capitalize">{ query }
 
-                            <IconButton sx={{ marginTop: 0, marginLeft: 1 }} onClick={ (e) => onCancelSearch()  }>
-                                <CancelIcon />
-                            </IconButton>
-                        
-                        </Typography>
-                        
-
-                    </Box>
+                                <IconButton sx={{ marginTop: 0, marginLeft: 1 }} onClick={ (e) => onCancelSearch()  }>
+                                    <CancelIcon />
+                                </IconButton>
+                            
+                            </Typography>
+                            
+                            
+                        </Box>
+                        <Typography variant='h6' mt={ 6 }> Te pueden gustar:</Typography>
+                    </>
                 )
         }
         
@@ -94,7 +97,7 @@ export const getServerSideProps: GetServerSideProps = async ({ params }) => {
     // TODO: retornar otros productos
     if ( !foundProducts ) {
         // products = await dbProducts.getAllProducts(); 
-        products = await dbProducts.getProductsByTerm('');
+        products = await dbProducts.getProductsByTerm('alexa');
     }
 
     return {
