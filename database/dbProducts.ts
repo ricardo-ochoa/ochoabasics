@@ -52,7 +52,7 @@ export const getProductsByTerm = async ( term:string): Promise<IProduct[]> => {
     .select('title images price category -_id')
     .lean();
 
-    await db.disconnect();
+    // await db.disconnect();
 
     // const updatedProducts = products.map( product => {
     //     product.images = product.images.map( image => {
