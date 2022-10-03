@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { styled, alpha } from '@mui/material/styles';
 import InputBase from '@mui/material/InputBase';
 import { Box } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
+import { useRouter } from 'next/router';
 
 
 const Search = styled('div')(({ theme }) => ({
@@ -49,12 +50,19 @@ const Search = styled('div')(({ theme }) => ({
 
 export const SearchBar = () => {
 
+    const { asPath, push } = useRouter();
+    const [searchTerm, setSearchTerm] = useState('');
+
     const [value, setValue] = React.useState(0);
 
     const handleChange = (event: React.SyntheticEvent, newValue: number) => {
       setValue(newValue);
     };
 
+    const onSearchTerm = () => {
+      if( searchTerm.trim().length === 0 ) return;
+      push(`/search/${ searchTerm }`);
+  }
 
   return (
     <Box sx={{ maxWidth:"600px" }} margin='0 auto' paddingTop={ 4 } width={'100%'}>
@@ -65,8 +73,15 @@ export const SearchBar = () => {
         <StyledInputBase
             placeholder="Search…"
             inputProps={{ 'aria-label': 'search' }}
+            autoFocus
+            value={ searchTerm }
+            onChange={ (e) => setSearchTerm( e.target.value ) }
+            onKeyPress={ (e) => e.key === 'Enter' ? onSearchTerm() : null }
+            type='text'
         />
         </Search>
+
+        
     </Box>
   )
 }

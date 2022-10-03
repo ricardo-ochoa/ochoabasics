@@ -28,9 +28,9 @@ export const ProductCard: FC<Props> = ({ product }) => {
                 </CardActionArea>
                 
                 <CardContent>
-                  <Typography variant="h6" component="div" color='info'>
+                  {/* <Typography variant="h6" component="div" color='info'>
                     ${ product.price } mxn
-                  </Typography>
+                  </Typography> */}
                   <Typography gutterBottom color={ "info.main" }>
                     { product.category }
                   </Typography>
