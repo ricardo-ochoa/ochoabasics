@@ -40,11 +40,9 @@ const SearchPage: NextPage<Props> = ({ products, foundProducts, query }) => {
                 ? <Box display='flex'sx={{ flexDirection:{ xs:'column', sm:'column', md:'row'}, alignItems:'center' }}>
                     <Typography variant='h4' sx={{ mb:{ xs: 0 }}} mt={ 4 } >Resultado de:</Typography>
                     <Typography variant='h4' sx={{ ml: 2, mt:{ xs: 0, md: 4 } }}  color="primary" textTransform="capitalize">{ query }
-                    
                         <IconButton sx={{ marginTop: 0, marginLeft: 1 }} onClick={ (e) => onCancelSearch()  }>
                             <CancelIcon />
                         </IconButton>
-
                     </Typography>
                     
                   
@@ -54,13 +52,11 @@ const SearchPage: NextPage<Props> = ({ products, foundProducts, query }) => {
                         <Box display='flex'sx={{ flexDirection:{ xs:'column', sm:'column', md:'row'}, alignItems:'center'  }}>
                             <Typography variant='h4' sx={{ mb: 1 }} mt={ 2 }>No encontramos:</Typography>
                             <Typography variant='h4' sx={{ ml: 2, mt:{ xs: 0, md: 1 } }}  color="primary" textTransform="capitalize">{ query }
-
-                                <IconButton sx={{ marginTop: 0, marginLeft: 1 }} onClick={ (e) => onCancelSearch()  }>
+                            
+                            <IconButton sx={{ marginTop: 0, marginLeft: 1 }} onClick={ (e) => onCancelSearch()  }>
                                     <CancelIcon />
-                                </IconButton>
-                            
+                            </IconButton>
                             </Typography>
-                            
                             
                         </Box>
                         <Typography variant='h6' mt={ 6 }> Te pueden gustar:</Typography>

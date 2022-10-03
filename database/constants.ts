@@ -1,3 +1,3 @@
 export const SHOP_CONSTANTS = {
-    validCategories: ['Mascotas','Hogar','Tecnología','Libros','Salud'],
+    validCategories: ['Mascotas','Hogar','Tecnología','Libros','Salud', 'all'],
 }

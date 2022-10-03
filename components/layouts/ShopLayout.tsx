@@ -1,7 +1,7 @@
 import { FC } from "react";
 import Head from "next/head"
-import { Box, Divider, Typography } from '@mui/material';
-import Link from "next/link";
+import { Box, Divider, Typography, Link } from '@mui/material';
+import NextLink from "next/link";
 //import { Navbar, SideMenu } from "../ui";
 
 
@@ -62,11 +62,11 @@ export const ShopLayout:FC<Props> = ({ children, title, pageDescription, imageFu
                 <Divider></Divider>
                 <Box display={'flex'} alignItems='center' justifyContent={'center'}>
                     <Typography  mt={ 4 } mb={ 4 } sx={{ textAlign:'center' }} mr='0.5rem'> Made with love by </Typography>
-                    <Link href="https://www.instagram.com/devochoa/" passHref>
-                        <a target="_blank" rel="noopener noreferrer">
-                            @Ochoagram
-                        </a>
-                    </Link>
+
+
+                            <a  href="https://www.instagram.com/devochoa/" target="_blank" rel="noopener noreferrer">
+                                @Ochoagram
+                            </a>
                 </Box>
             </Box>
             

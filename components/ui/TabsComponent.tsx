@@ -4,6 +4,7 @@ import { useProducts } from '../../hooks';
 import { ProductList } from '../products';
 import { FullScreenLoading } from './FullScreenLoading';
 import { IProduct } from '../../interfaces';
+import { ChildFriendly } from '@mui/icons-material';
 
 
 interface TabPanelProps {
@@ -25,7 +26,7 @@ interface TabPanelProps {
       >
         {value === index && (
           <Box sx={{ p: 3 }}>
-            <Typography>{children}</Typography>
+            <Box>{ children }</Box>
           </Box>
         )}
       </div>
