@@ -22,11 +22,11 @@ export default async function handler( req: NextApiRequest, res: NextApiResponse
 
 const getProducts = async (req: NextApiRequest, res: NextApiResponse<Data> ) => {
 
-    const { category = 'all' } = req.query;
+    const { category = '' } = req.query;
 
     let condition = {};
 
-    if ( category !== 'all' && SHOP_CONSTANTS.validCategories.includes(`${ category }`) ) {
+    if ( category !== '' && SHOP_CONSTANTS.validCategories.includes(`${ category }`) ) {
         condition = { category };
     }
 

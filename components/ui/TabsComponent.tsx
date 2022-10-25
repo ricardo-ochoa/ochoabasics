@@ -62,6 +62,7 @@ const TabsComponents:FC<Props> = ({ query }) => {
   const showMascotas = products.filter( product => product.category === "Mascotas" );
   const showLibros = products.filter( product => product.category === "Libros" );
   const showTech = products.filter( product => product.category === "Tecnología" );
+  const showBebe = products.filter( product => product.category === "Bebés" );
 
   return (
     <>
@@ -77,6 +78,7 @@ const TabsComponents:FC<Props> = ({ query }) => {
         <Tab key={ 0 } label={ 'Mascotas' } {...a11yProps( 0 )} />
         <Tab key={ 1 } label={ 'Tecnología' } {...a11yProps( 1 )} />
         <Tab key={ 2 } label={ 'Libros' } {...a11yProps( 2 )} />
+        <Tab key={ 3 } label={ 'Bebés' } {...a11yProps( 3 )} />
         {/*            
         {
             products.map( category =>(
@@ -101,6 +103,10 @@ const TabsComponents:FC<Props> = ({ query }) => {
 
                 <TabPanel key={ 2 } value={value} index={ 2 }>
                     <ProductList products={ showLibros } />
+                </TabPanel>
+
+                <TabPanel key={ 3 } value={value} index={ 3 }>
+                    <ProductList products={ showBebe } />
                 </TabPanel>
                 </>
             
